@@ -46,9 +46,8 @@ fn index(req: Request(Body)) {
     Get -> index.index(req)
 
     _ ->
-      response.new(404)
-      |> response.set_body(BitBuilderBody(bit_builder.new()))
-      |> Response
+      error.view(404)
+      |> glow_response.render_view(404)
   }
 }
 
@@ -60,9 +59,8 @@ fn greeter(req: Request(Body)) {
     Get, ["greet", "user"] -> greet.greet_user(req)
 
     _, _ ->
-      response.new(404)
-      |> response.set_body(BitBuilderBody(bit_builder.new()))
-      |> Response
+      error.view(404)
+      |> glow_response.render_view(404)
   }
 }
 
