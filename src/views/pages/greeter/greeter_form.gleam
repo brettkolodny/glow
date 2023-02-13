@@ -1,6 +1,6 @@
 import nakai/html.{Node}
 import nakai/html/attrs.{action, class, for, name, type_}
-import views/root
+import views/app
 
 pub fn view() -> Node(a) {
   html.div(
@@ -60,5 +60,5 @@ pub fn view() -> Node(a) {
       ),
     ],
   )
-  |> root.view()
+  |> app.view()
 }

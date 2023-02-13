@@ -15,7 +15,7 @@ import controllers/index
 import controllers/greet
 import glow/utils/mimetype
 import glow/utils/response as glow_response
-import views/pages/not_found
+import views/pages/error
 
 // ROUTES -------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ pub fn routes() {
     ["assets", ..] -> static(req)
     //
     _ ->
-      not_found.view()
+      error.view(404)
       |> glow_response.render_view(404)
   }
 }

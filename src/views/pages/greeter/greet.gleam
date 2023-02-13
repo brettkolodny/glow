@@ -1,6 +1,6 @@
 import nakai/html.{Node}
 import nakai/html/attrs.{class, href}
-import views/root
+import views/app
 
 pub fn view(name: String, age: Int) -> Node(a) {
   let p_text = case age {
@@ -39,5 +39,5 @@ pub fn view(name: String, age: Int) -> Node(a) {
       ),
     ],
   )
-  |> root.view()
+  |> app.view()
 }
