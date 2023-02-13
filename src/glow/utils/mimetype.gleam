@@ -1,8 +1,17 @@
+// Taken from https://github.com/davecaos/benetnasch as I didn't see it published
+
+// TYPES ----------------------------------------------------------------------
+
 pub type Extension =
   String
 
 pub type Mimetype =
   String
+
+pub type ExtensionType =
+  String
+
+// CONSTRUCTORS ---------------------------------------------------------------
 
 pub fn extension_to_mimetype(extension: Extension) -> Mimetype {
   case extension {
@@ -1797,9 +1806,6 @@ pub fn mimetype_to_extentions(mimetype: String) -> List(Extension) {
     _ -> [""]
   }
 }
-
-pub type ExtensionType =
-  String
 
 pub fn web_extensions(extension: Extension) -> #(ExtensionType, Extension) {
   case extension {

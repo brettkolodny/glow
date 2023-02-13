@@ -14,6 +14,7 @@ import mist/handler.{Response}
 import controllers/index
 import controllers/greet
 import glow/utils/mimetype
+import glow/utils/response as glow_response
 import views/pages/not_found
 
 // ROUTES -------------------------------------------------------------------
@@ -34,9 +35,8 @@ pub fn routes() {
     ["assets", ..] -> static(req)
     //
     _ ->
-      response.new(404)
-      |> response.set_body(BitBuilderBody(bit_builder.from_string(not_found.view())))
-      |> Response
+      not_found.view()
+      |> glow_response.render_view(404)
   }
 }
 
