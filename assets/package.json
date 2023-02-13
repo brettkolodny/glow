@@ -1,0 +1,19 @@
+{
+  "name": "glow",
+  "version": "1.0.0",
+  "description": "[![Package Version](https://img.shields.io/hexpm/v/glow)](https://hex.pm/packages/glow) [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/glow/)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./style.css -o ../priv/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
