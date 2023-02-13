@@ -1,24 +1,31 @@
 # glow
 
-[![Package Version](https://img.shields.io/hexpm/v/glow)](https://hex.pm/packages/glow)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/glow/)
+Glow is less of a framework and more of a template that combines several Gleam libraries together in a cohesive, ergonomic way, along with some helper functions to make the experience more enjoyable.
 
-A Gleam project
+## Features
+
+Glow is heavily inspired by Phoenix and follows it's general MVC layout. This template includes:
+
+- A web server using [mist]("https://github.com/rawhat/mist")
+- Server side rendering with [nakai](https://github.com/nakaibuild/nakai)
+- Client side functionality with [lustre](https://github.com/hayleigh-dot-dev/gleam-lustre) (Coming soon!)
+- Tailwind
 
 ## Quick start
 
-```sh
-gleam run   # Run the project
-gleam test  # Run the tests
-gleam shell # Run an Erlang shell
-```
-
-## Installation
-
-If available on Hex this package can be added to your Gleam project:
+In one terminal session run:
 
 ```sh
-gleam add glow
+cd assets
+npm install
+npm run dev
 ```
 
-and its documentation can be found at <https://hexdocs.pm/glow>.
+Then in another run:
+
+```sh
+gleam run
+```
+
+Now navigate to https://localhost:8080/!
+
